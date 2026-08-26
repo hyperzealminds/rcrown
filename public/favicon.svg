@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <!-- Definition of gradients for golden accents -->
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A0845B" />
+      <stop offset="50%" stop-color="#C5A880" />
+      <stop offset="100%" stop-color="#8A6F48" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <!-- Crown Emblem -->
+    <path d="M 50,20 
+             L 62,45 
+             L 78,30 
+             L 70,65 
+             L 30,65 
+             L 22,30 
+             L 38,45 
+             Z" 
+          fill="url(#gold-grad)" />
+    
+    <!-- Jewels on Crown tips -->
+    <circle cx="50" cy="17" r="3" fill="#FAF7F0" />
+    <circle cx="22" cy="27" r="2.5" fill="#FAF7F0" />
+    <circle cx="78" cy="27" r="2.5" fill="#FAF7F0" />
+    
+    <!-- Crown base band -->
+    <rect x="33" y="68" width="34" height="4" rx="2" fill="url(#gold-grad)" />
+    
+    <!-- Elegant serif letter 'R' inside the crown base space -->
+    <text x="50" y="58" 
+          font-family="'Playfair Display', Georgia, serif" 
+          font-size="24" 
+          font-weight="bold" 
+          fill="#FAF7F0" 
+          text-anchor="middle">R</text>
+  </g>
+
+  <!-- Typography Brand Name -->
+  <text x="115" y="58" 
+        font-family="'Playfair Display', Georgia, serif" 
+        font-size="34" 
+        font-weight="700" 
+        letter-spacing="4" 
+        fill="#0A0A0A">R CROWN</text>
+
+  <!-- Subtitle Tagline -->
+  <text x="115" y="82" 
+        font-family="'Inter', sans-serif" 
+        font-size="10.5" 
+        font-weight="500" 
+        letter-spacing="2.5" 
+        fill="#8A6F48">SALON &amp; MAKEUP STUDIO</text>
+</svg>
