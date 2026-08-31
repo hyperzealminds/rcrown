@@ -31,7 +31,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-brand-ivory">
+    <div className="flex flex-col min-h-screen bg-brand-black text-brand-ivory">
       {/* Scroll listener */}
       <ScrollToTop />
 

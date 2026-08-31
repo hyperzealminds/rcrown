@@ -4,11 +4,11 @@
 
 @layer base {
   body {
-    @apply bg-brand-ivory text-brand-black font-sans selection:bg-brand-gold selection:text-white;
+    @apply bg-brand-black text-brand-ivory font-sans selection:bg-brand-gold selection:text-brand-black;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-brand-black tracking-wide;
+    @apply font-serif text-brand-ivory tracking-wide;
   }
 }
 
@@ -18,39 +18,39 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF7F0;
+  background: #080808;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C5A880;
+  background: #C9A86A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A0845B;
+  background: #B8934E;
 }
 
 /* Glassmorphism Classes */
 .glass-nav {
-  background: rgba(250, 247, 240, 0.85);
+  background: rgba(8, 8, 8, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(197, 168, 128, 0.15);
+  border: 1px solid rgba(201, 168, 106, 0.15);
 }
 
 /* Premium Gold Text Gradient */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #C5A880 0%, #E3D2BA 50%, #A0845B 100%);
+  background: linear-gradient(135deg, #C9A86A 0%, #FAF7F0 50%, #B8934E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-gold-gradient {
-  background: linear-gradient(135deg, #A0845B 0%, #C5A880 50%, #D8C3A5 100%);
+  background: linear-gradient(135deg, #B8934E 0%, #C9A86A 50%, #D4B67A 100%);
 }

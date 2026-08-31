@@ -64,12 +64,16 @@ export default function Gallery() {
   };
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 bg-brand-charcoal py-4 text-brand-ivory">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl md:text-4xl font-serif text-brand-black tracking-wide uppercase">
-          R CROWN ACADEMY &amp; MAKEUP GALLERY
+        <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-brand-gold uppercase block">
+          Academy &amp; Studio Portfolios
+        </span>
+        <h2 className="text-3xl md:text-4xl font-serif text-brand-ivory tracking-wide uppercase">
+          R CROWN MAKEUP GALLERY
         </h2>
-        <p className="text-sm text-brand-charcoal/70 max-w-xl mx-auto">
+        <div className="w-16 h-[1.5px] bg-brand-gold mx-auto mt-4" />
+        <p className="text-xs text-[#A0A0A0] max-w-xl mx-auto font-light leading-relaxed">
           Explore the professional makeovers, student training sessions, and creative nail/hair arts crafted at our Bengaluru studio.
         </p>
       </div>
@@ -83,10 +87,10 @@ export default function Gallery() {
               setActiveFilter(cat.id);
               setLightboxIndex(null); // Reset lightbox indexing just in case
             }}
-            className={`px-4 py-2 text-xs tracking-wider uppercase border transition-all duration-200 ${
+            className={`px-4 py-2 text-[10px] tracking-widest uppercase border transition-all duration-200 rounded-sm font-semibold ${
               activeFilter === cat.id
-                ? "bg-brand-gold text-white border-brand-gold font-semibold shadow-sm"
-                : "border-brand-gold/15 text-brand-charcoal hover:border-brand-gold/45 bg-white"
+                ? "bg-brand-gold text-brand-black border-brand-gold shadow-md font-bold"
+                : "border-brand-gold/25 text-brand-ivory/80 hover:border-brand-gold/75 bg-brand-black/40"
             }`}
           >
             {cat.label}
@@ -95,25 +99,25 @@ export default function Gallery() {
       </div>
 
       {/* Grid Display */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         {filteredItems.map((item) => (
           <div
             key={item.id}
             onClick={() => openLightbox(item)}
-            className="group relative aspect-[4/3] overflow-hidden border border-brand-gold/10 bg-brand-cream cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="group relative aspect-[4/3] overflow-hidden border border-brand-gold/15 bg-brand-black cursor-pointer shadow-lg hover:border-brand-gold/45 transition-all duration-300 rounded-sm"
           >
             <img
               src={item.imageUrl}
               alt={item.altText}
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-95"
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-brand-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-left">
-              <span className="text-[10px] text-brand-gold font-semibold uppercase tracking-widest mb-1">
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
+              <span className="text-[9px] text-brand-gold font-bold uppercase tracking-widest mb-1.5">
                 {item.category}
               </span>
-              <h4 className="text-white text-base font-serif tracking-wide">
+              <h4 className="text-brand-ivory text-base font-serif tracking-wide uppercase">
                 {item.title}
               </h4>
             </div>

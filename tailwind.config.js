@@ -8,13 +8,14 @@ export default {
     extend: {
       colors: {
         brand: {
-          black: '#0A0A0A',
-          charcoal: '#1A1A1A',
-          ivory: '#FAF7F0',
-          cream: '#FFFDD0',
-          champagne: '#F7E7CE',
-          gold: '#C5A880', // elegant muted gold
-          goldDark: '#A0845B',
+          black: '#080808',
+          charcoal: '#111111',
+          ivory: '#F5F0E6',
+          gold: '#C9A86A',
+          goldDark: '#B8934E',
+          goldLight: '#D4B67A',
+          maroon: '#7A0F19',
+          maroonDark: '#52060E',
         }
       },
       fontFamily: {

@@ -102,12 +102,12 @@ export default function EnquiryForm() {
   };
 
   return (
-    <div className="bg-white border border-brand-gold/15 p-6 md:p-10 shadow-md max-w-2xl mx-auto">
+    <div className="bg-brand-charcoal border border-brand-gold/20 p-6 md:p-10 shadow-2xl max-w-2xl mx-auto rounded-sm text-brand-ivory">
       {submitSuccess ? (
         <div className="text-center py-10 space-y-4">
           <CheckCircle className="h-16 w-16 text-green-600 mx-auto" />
-          <h3 className="text-2xl font-serif text-brand-black">Enquiry Initiated!</h3>
-          <p className="text-sm text-brand-charcoal/80 max-w-md mx-auto">
+          <h3 className="text-2xl font-serif text-brand-ivory uppercase tracking-wide">Enquiry Initiated!</h3>
+          <p className="text-xs text-[#A0A0A0] max-w-md mx-auto leading-relaxed">
             We are opening a WhatsApp chat window containing your formatted enquiry details. Please press send in WhatsApp to submit your admission request.
           </p>
           <button
@@ -122,7 +122,7 @@ export default function EnquiryForm() {
                 message: ""
               });
             }}
-            className="mt-6 px-6 py-2 bg-brand-charcoal text-white hover:bg-brand-black text-xs uppercase tracking-wider font-semibold transition"
+            className="mt-6 px-8 py-3 bg-brand-gold text-brand-black hover:bg-brand-goldDark text-xs uppercase tracking-widest font-bold transition rounded-sm shadow-md"
           >
             Submit Another Enquiry
           </button>
@@ -130,14 +130,15 @@ export default function EnquiryForm() {
       ) : (
         <form onSubmit={handleFormSubmit} className="space-y-6">
           <div className="text-center space-y-2">
-            <h3 className="text-2xl font-serif text-brand-black uppercase">ACADEMY &amp; STUDIO ENQUIRY</h3>
-            <p className="text-xs text-brand-charcoal/70">
-              Submit your info below to get batch schedules, fees, and syllabus details via WhatsApp.
+            <h3 className="text-2xl font-serif text-brand-ivory uppercase tracking-wider">ACADEMY &amp; STUDIO ENQUIRY</h3>
+            <p className="text-[10px] text-brand-gold font-semibold uppercase tracking-widest">
+              Get batch schedules, fees, &amp; syllabus details via WhatsApp
             </p>
+            <div className="w-12 h-[1px] bg-brand-gold/30 mx-auto mt-2" />
           </div>
 
           {submitError && (
-            <div className="flex items-center space-x-2 p-4 bg-red-50 text-red-700 border border-red-200 text-sm">
+            <div className="flex items-center space-x-2 p-4 bg-red-950/40 text-red-300 border border-red-800 text-xs">
               <AlertTriangle className="h-5 w-5 shrink-0" />
               <span>{submitError}</span>
             </div>
@@ -145,7 +146,7 @@ export default function EnquiryForm() {
 
           {/* Name Field */}
           <div>
-            <label htmlFor="name" className="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-2">
+            <label htmlFor="name" className="block text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-2">
               Full Name *
             </label>
             <input
@@ -155,8 +156,8 @@ export default function EnquiryForm() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your full name"
-              className={`w-full px-4 py-3 bg-brand-ivory/50 border text-sm text-brand-charcoal focus:outline-none focus:ring-1 focus:ring-brand-gold ${
-                errors.name ? "border-red-500" : "border-brand-gold/15"
+              className={`w-full px-4 py-3 bg-brand-black border text-sm text-brand-ivory focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm ${
+                errors.name ? "border-red-500" : "border-brand-gold/25"
               }`}
             />
             {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
@@ -165,7 +166,7 @@ export default function EnquiryForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Phone Field */}
             <div>
-              <label htmlFor="phone" className="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-2">
+              <label htmlFor="phone" className="block text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-2">
                 Mobile Number *
               </label>
               <input
@@ -175,8 +176,8 @@ export default function EnquiryForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="10-digit phone number"
-                className={`w-full px-4 py-3 bg-brand-ivory/50 border text-sm text-brand-charcoal focus:outline-none focus:ring-1 focus:ring-brand-gold ${
-                  errors.phone ? "border-red-500" : "border-brand-gold/15"
+                className={`w-full px-4 py-3 bg-brand-black border text-sm text-brand-ivory focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm ${
+                  errors.phone ? "border-red-500" : "border-brand-gold/25"
                 }`}
               />
               {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
@@ -184,7 +185,7 @@ export default function EnquiryForm() {
 
             {/* WhatsApp Field */}
             <div>
-              <label htmlFor="whatsapp" className="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-2">
+              <label htmlFor="whatsapp" className="block text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-2">
                 WhatsApp Number *
               </label>
               <input
@@ -194,8 +195,8 @@ export default function EnquiryForm() {
                 value={formData.whatsapp}
                 onChange={handleChange}
                 placeholder="10-digit WhatsApp number"
-                className={`w-full px-4 py-3 bg-brand-ivory/50 border text-sm text-brand-charcoal focus:outline-none focus:ring-1 focus:ring-brand-gold ${
-                  errors.whatsapp ? "border-red-500" : "border-brand-gold/15"
+                className={`w-full px-4 py-3 bg-brand-black border text-sm text-brand-ivory focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm ${
+                  errors.whatsapp ? "border-red-500" : "border-brand-gold/25"
                 }`}
               />
               {errors.whatsapp && <p className="text-xs text-red-500 mt-1">{errors.whatsapp}</p>}
@@ -205,28 +206,28 @@ export default function EnquiryForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Course Interest */}
             <div>
-              <label htmlFor="course" className="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-2">
-                Course or Service of Interest *
+              <label htmlFor="course" className="block text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-2">
+                Course or Service *
               </label>
               <select
                 id="course"
                 name="course"
                 value={formData.course}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-brand-ivory/50 border border-brand-gold/15 text-sm text-brand-charcoal focus:outline-none focus:ring-1 focus:ring-brand-gold"
+                className="w-full px-4 py-3 bg-brand-black border border-brand-gold/25 text-sm text-brand-ivory focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm"
               >
-                <option value="Advanced Makeup & Beautician Course">Advanced Makeup &amp; Beautician Course</option>
-                <option value="Beautician Course">Beautician Course</option>
-                <option value="Hair Course">Hair Course</option>
-                <option value="Nail Course">Nail Course</option>
-                <option value="Makeup Services">Makeup Services Enquiry</option>
-                <option value="Other">Other Enquiry</option>
+                <option value="Advanced Makeup & Beautician Course" className="bg-brand-charcoal text-brand-ivory">Advanced Makeup &amp; Beautician Course</option>
+                <option value="Beautician Course" className="bg-brand-charcoal text-brand-ivory">Beautician Course</option>
+                <option value="Hair Course" className="bg-brand-charcoal text-brand-ivory">Hair Course</option>
+                <option value="Nail Course" className="bg-brand-charcoal text-brand-ivory">Nail Course</option>
+                <option value="Makeup Services" className="bg-brand-charcoal text-brand-ivory">Makeup Services Enquiry</option>
+                <option value="Other" className="bg-brand-charcoal text-brand-ivory">Other Enquiry</option>
               </select>
             </div>
 
             {/* Preferred Batch */}
             <div>
-              <label htmlFor="batch" className="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-2">
+              <label htmlFor="batch" className="block text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-2">
                 Preferred Batch *
               </label>
               <select
@@ -234,19 +235,19 @@ export default function EnquiryForm() {
                 name="batch"
                 value={formData.batch}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-brand-ivory/50 border border-brand-gold/15 text-sm text-brand-charcoal focus:outline-none focus:ring-1 focus:ring-brand-gold"
+                className="w-full px-4 py-3 bg-brand-black border border-brand-gold/25 text-sm text-brand-ivory focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm"
               >
-                <option value="Morning Batch">Morning (10:00 AM - 01:00 PM)</option>
-                <option value="Afternoon Batch">Afternoon (02:00 PM - 05:00 PM)</option>
-                <option value="Weekend Batch">Weekend (Saturday &amp; Sunday)</option>
-                <option value="Flexible Batch">Flexible Timings</option>
+                <option value="Morning Batch" className="bg-brand-charcoal text-brand-ivory">Morning (10:00 AM - 01:00 PM)</option>
+                <option value="Afternoon Batch" className="bg-brand-charcoal text-brand-ivory">Afternoon (02:00 PM - 05:00 PM)</option>
+                <option value="Weekend Batch" className="bg-brand-charcoal text-brand-ivory">Weekend (Saturday &amp; Sunday)</option>
+                <option value="Flexible Batch" className="bg-brand-charcoal text-brand-ivory">Flexible Timings</option>
               </select>
             </div>
           </div>
 
           {/* Message Field */}
           <div>
-            <label htmlFor="message" className="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-2">
+            <label htmlFor="message" className="block text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-2">
               Message or Specific Queries
             </label>
             <textarea
@@ -256,7 +257,7 @@ export default function EnquiryForm() {
               onChange={handleChange}
               rows={4}
               placeholder="Tell us about your background or requirements..."
-              className="w-full px-4 py-3 bg-brand-ivory/50 border border-brand-gold/15 text-sm text-brand-charcoal focus:outline-none focus:ring-1 focus:ring-brand-gold resize-none"
+              className="w-full px-4 py-3 bg-brand-black border border-brand-gold/25 text-sm text-brand-ivory focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold resize-none rounded-sm"
             />
           </div>
 
@@ -264,14 +265,14 @@ export default function EnquiryForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center space-x-2 py-4 bg-brand-gold hover:bg-brand-goldDark disabled:bg-brand-gold/50 text-white font-semibold text-sm tracking-widest uppercase transition duration-300 shadow-md"
+            className="w-full flex items-center justify-center space-x-2 py-4 bg-brand-gold hover:bg-brand-goldDark disabled:bg-brand-gold/50 text-brand-black font-bold text-xs tracking-widest uppercase transition duration-300 shadow-md rounded-sm"
           >
             {isSubmitting ? (
               <span>Preparing Enquiry...</span>
             ) : (
               <>
                 <Send className="h-4 w-4" />
-                <span>Submit and Chat on WhatsApp</span>
+                <span>Submit &amp; Open WhatsApp Chat</span>
               </>
             )}
           </button>

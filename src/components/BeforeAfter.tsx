@@ -67,12 +67,18 @@ export default function BeforeAfter({
   };
 
   return (
-    <div className="space-y-6 text-center">
-      <h2 className="text-3xl md:text-4xl font-serif text-brand-black tracking-wide">
-        SEE THE TRANSFORMATION
-      </h2>
-      <p className="text-sm text-brand-charcoal/70 max-w-xl mx-auto">
-        Drag the slider to view the transformation results achieved during training and studio sessions.
+    <div className="space-y-6 text-center text-brand-ivory bg-brand-black">
+      <div className="space-y-2">
+        <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-brand-gold uppercase block">
+          Makeover Outcomes
+        </span>
+        <h2 className="text-3xl md:text-4xl font-serif text-brand-ivory tracking-wide uppercase">
+          SEE THE TRANSFORMATION
+        </h2>
+        <div className="w-16 h-[1.5px] bg-brand-gold mx-auto mt-4" />
+      </div>
+      <p className="text-xs text-[#A0A0A0] max-w-xl mx-auto font-light leading-relaxed">
+        Drag the slider to view the makeover transformations achieved during our training and studio sessions in Rajajinagar.
       </p>
 
       <div
@@ -82,7 +88,7 @@ export default function BeforeAfter({
         onKeyDown={handleKeyDown}
         tabIndex={0}
         aria-label="Before and after transformation slider. Use left and right arrow keys to adjust."
-        className="relative w-full max-w-3xl aspect-[4/3] mx-auto overflow-hidden select-none border border-brand-gold/15 shadow-lg group focus:outline-none focus:ring-2 focus:ring-brand-gold"
+        className="relative w-full max-w-3xl aspect-[4/3] mx-auto overflow-hidden select-none border border-brand-gold/25 shadow-2xl group focus:outline-none focus:ring-2 focus:ring-brand-gold rounded-sm"
       >
         {/* After Image (Background) */}
         <img
@@ -90,7 +96,7 @@ export default function BeforeAfter({
           alt={afterAlt}
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         />
-        <div className="absolute top-4 right-4 bg-brand-black/75 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 uppercase tracking-widest border border-brand-gold/25 pointer-events-none">
+        <div className="absolute top-4 right-4 bg-brand-black/85 backdrop-blur-md text-brand-ivory text-[10px] font-semibold px-4 py-2 uppercase tracking-widest border border-brand-gold/25 pointer-events-none rounded-sm">
           {labelAfter}
         </div>
 
@@ -104,20 +110,20 @@ export default function BeforeAfter({
             alt={beforeAlt}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute top-4 left-4 bg-brand-black/75 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 uppercase tracking-widest border border-brand-gold/25">
+          <div className="absolute top-4 left-4 bg-brand-black/85 backdrop-blur-md text-brand-ivory text-[10px] font-semibold px-4 py-2 uppercase tracking-widest border border-brand-gold/25 rounded-sm">
             {labelBefore}
           </div>
         </div>
 
         {/* Slider Handle Divider Line */}
         <div
-          className="absolute top-0 bottom-0 w-1 bg-brand-gold cursor-ew-resize select-none"
+          className="absolute top-0 bottom-0 w-[2px] bg-brand-gold cursor-ew-resize select-none"
           style={{ left: `${sliderPosition}%` }}
           onMouseDown={handleMouseDown}
           onTouchStart={handleTouchStart}
         >
           {/* Draggable Circle Centerpiece */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white border-2 border-brand-gold rounded-full flex items-center justify-between px-1.5 shadow-md">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-brand-charcoal border-2 border-brand-gold rounded-full flex items-center justify-between px-2.5 shadow-2xl">
             <span className="text-[10px] text-brand-gold font-bold">◀</span>
             <span className="text-[10px] text-brand-gold font-bold">▶</span>
           </div>

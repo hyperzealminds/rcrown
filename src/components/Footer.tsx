@@ -36,19 +36,19 @@ export default function Footer() {
               href={BUSINESS.instagramPrimary.url} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-brand-charcoal hover:bg-brand-gold hover:text-white transition-colors duration-200"
+              className="p-2 bg-brand-charcoal hover:bg-brand-gold hover:text-brand-black transition-colors duration-200"
               aria-label="Instagram Academy"
             >
-              <InstagramIcon className="h-5 w-5 text-white" />
+              <InstagramIcon className="h-5 w-5 text-brand-ivory hover:text-brand-black" />
             </a>
             <a 
               href={BUSINESS.instagramSecondary.url} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-brand-charcoal hover:bg-brand-gold hover:text-white transition-colors duration-200"
+              className="p-2 bg-brand-charcoal hover:bg-brand-gold hover:text-brand-black transition-colors duration-200"
               aria-label="Instagram Artistry"
             >
-              <InstagramIcon className="h-5 w-5 text-white" />
+              <InstagramIcon className="h-5 w-5 text-brand-ivory hover:text-brand-black" />
             </a>
           </div>
         </div>
